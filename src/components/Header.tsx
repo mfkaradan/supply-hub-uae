@@ -6,8 +6,10 @@ import logo from "@/assets/abm-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/home-2", label: "Home 2" },
   { to: "/about", label: "About Us" },
   { to: "/products", label: "Products" },
+  { to: "/products-2", label: "Products 2" },
   { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact Us" },
 ] as const;
@@ -44,7 +46,7 @@ export function Header() {
             <span className="sr-only">Arafa Building Materials</span>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {links.map((link) => (
               <Link
                 key={link.to}
