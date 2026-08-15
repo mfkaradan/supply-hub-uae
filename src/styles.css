@@ -191,3 +191,31 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* --- Home 2 / Products 2 premium glass utilities --- */
+@utility glass-card {
+  background: color-mix(in oklab, var(--color-background) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 8%, transparent);
+  box-shadow: 0 18px 40px -28px oklch(0.24 0.012 250 / 0.4);
+}
+
+@utility glass-card-dark {
+  background: color-mix(in oklab, var(--color-background) 8%, transparent);
+  backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid color-mix(in oklab, var(--color-background) 14%, transparent);
+}
+
+@utility float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
