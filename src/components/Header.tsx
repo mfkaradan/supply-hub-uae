@@ -6,10 +6,8 @@ import logo from "@/assets/abm-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/home-2", label: "Home 2" },
   { to: "/about", label: "About Us" },
   { to: "/products", label: "Products" },
-  { to: "/products-2", label: "Products 2" },
   { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact Us" },
 ] as const;
@@ -37,11 +35,11 @@ export function Header() {
         <div className="grid h-18 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)}>
             <img
-              src={logo.url}
+              src="https://supply-hub-uae.lovable.app/__l5e/assets-v1/bcf47304-ddba-4292-ba99-01c985df2342/abm-logo.png"
               alt="Arafa Building Materials logo"
-              width={160}
-              height={54}
-              className="h-11 w-auto shrink-0"
+              width={300}
+              height={100}
+              className="h-18 w-auto shrink-0"
             />
             <span className="sr-only">Arafa Building Materials</span>
           </Link>
