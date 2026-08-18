@@ -1,25 +1,36 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { ArrowUp } from "lucide-react";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 700) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    const footer = document.getElementById("site-footer") || document.querySelector("footer");
+    if (!footer) return;
 
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
-    toggleVisibility();
+    // Only show button when the footer enters the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry) {
+          setIsVisible(entry.isIntersecting);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.05,
+      }
+    );
+
+    observer.observe(footer);
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      observer.disconnect();
     };
-  }, []);
+  }, [location.pathname]);
 
   const scrollToTop = () => {
     window.scrollTo({

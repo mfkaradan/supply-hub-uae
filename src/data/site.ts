@@ -8,6 +8,17 @@ import paints from "@/assets/cat-paints.jpg";
 import timber from "@/assets/cat-timber.jpg";
 import safety from "@/assets/cat-safety.jpg";
 
+import switchGear from "@/assets/switch-gear.png";
+import lighting from "@/assets/lighting.jpeg";
+import homeAutomation from "@/assets/home-automation.jpeg";
+import powerTools from "@/assets/power-tools.jpeg";
+import weldingCutting from "@/assets/welding-cutting.jpeg";
+import cement from "@/assets/cement.jpeg";
+import flooring from "@/assets/flooring.jpeg";
+import kitchens from "@/assets/kitchens.jpeg";
+import cleaningEquipment from "@/assets/cleaning-equipment.jpeg";
+import generalConsumables from "@/assets/General-consumables.jpeg";
+import marine from "@/assets/Marine.jpeg";
 
 // Brand logos
 import brand3M from "@/assets/brands/3M.webp";
@@ -66,17 +77,17 @@ export const categories: Category[] = [
   {
     name: "Switch & Gears",
     description: "Switchgear, distribution and control components for safe power.",
-    image: electrical,
+    image: switchGear,
   },
   {
     name: "Lighting",
     description: "Indoor, outdoor and site lighting solutions for all applications.",
-    image: electrical,
+    image: lighting,
   },
   {
     name: "Home Automation",
     description: "Smart control products for modern residential and commercial spaces.",
-    image: electrical,
+    image: homeAutomation,
   },
   {
     name: "Hardware & Tools",
@@ -86,12 +97,12 @@ export const categories: Category[] = [
   {
     name: "Power Tools",
     description: "Professional power tools and accessories for demanding work.",
-    image: tools,
+    image: powerTools,
   },
   {
     name: "Welding & Cutting",
     description: "Welding equipment, consumables and cutting accessories.",
-    image: tools,
+    image: weldingCutting,
   },
   {
     name: "Steel",
@@ -101,7 +112,7 @@ export const categories: Category[] = [
   {
     name: "Cement",
     description: "Cement and related building products for structural applications.",
-    image: steel,
+    image: cement,
   },
   {
     name: "Timber & Plywood",
@@ -116,12 +127,12 @@ export const categories: Category[] = [
   {
     name: "Flooring",
     description: "Flooring materials and finishing products for varied environments.",
-    image: ceramics,
+    image: flooring,
   },
   {
     name: "Kitchens",
     description: "Kitchen fittings and supporting products for residential projects.",
-    image: sanitary,
+    image: kitchens,
   },
   {
     name: "Safety Wear",
@@ -131,17 +142,17 @@ export const categories: Category[] = [
   {
     name: "Cleaning Equipment",
     description: "Cleaning machines and equipment for sites and facilities.",
-    image: safety,
+    image: cleaningEquipment,
   },
   {
     name: "General Consumables",
     description: "Everyday consumables that keep site work moving without delays.",
-    image: tools,
+    image: generalConsumables,
   },
   {
     name: "Marine",
     description: "Marine-related supplies and equipment for specialised requirements.",
-    image: steel,
+    image: marine,
   },
 ];
 

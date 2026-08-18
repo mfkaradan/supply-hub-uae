@@ -1,7 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import logo from "@/assets/abm-logo.png.asset.json";
+// import logo from "@/assets/abm-logo.png.asset.json";
+import logo2 from "@/assets/abm-logo-2.webp"
+
+
 
 const links = [
   { to: "/", label: "Home" },
@@ -13,12 +16,12 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-navy-foreground">
+    <footer id="site-footer" className="bg-navy text-navy-foreground">
       <div className="container-abm grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr] lg:py-20">
         <div className="max-w-sm">
           <div className="inline-flex rounded-md bg-background px-4 py-3">
             <img
-              src={logo.url}
+              src={logo2}
               alt="Arafa Building Materials logo"
               width={160}
               height={54}
