@@ -8,6 +8,34 @@ import paints from "@/assets/cat-paints.jpg";
 import timber from "@/assets/cat-timber.jpg";
 import safety from "@/assets/cat-safety.jpg";
 
+
+// Brand logos
+import brand3M from "@/assets/brands/3M.webp";
+import abb from "@/assets/brands/ABB.webp";
+import albatros from "@/assets/brands/albatros.webp";
+import bosch from "@/assets/brands/Bosch.webp";
+import cosmoplast from "@/assets/brands/Cosmoplast.webp";
+import decoduct from "@/assets/brands/Decoduct.webp";
+import dewalt from "@/assets/brands/DeWalt.webp";
+import ducab from "@/assets/brands/Ducab.webp";
+import fujcab from "@/assets/brands/Fujcab.webp";
+import grohe from "@/assets/brands/Grohe.webp";
+import henkel from "@/assets/brands/Henkel.webp";
+import hikoki from "@/assets/brands/Hikoki.webp";
+import kludiRak from "@/assets/brands/KLUDI-RAK.webp";
+import knipex from "@/assets/brands/Knipex.webp";
+import makita from "@/assets/brands/makita.webp";
+import mustang from "@/assets/brands/Mustang.webp";
+import panasonic from "@/assets/brands/Panasonic.webp";
+import polycon from "@/assets/brands/Polycon.webp";
+import puma from "@/assets/brands/Puma.webp";
+import rakCeramics from "@/assets/brands/RAK-Ceramics.webp";
+import rexton from "@/assets/brands/Rexton.webp";
+import stanley from "@/assets/brands/Stanley.webp";
+import teka from "@/assets/brands/Teka.webp";
+import tileOfSpain from "@/assets/brands/tile-of-spain-usa-logo.webp";
+import tramontina from "@/assets/brands/Tramontina.webp";
+
 export type Category = {
   name: string;
   description: string;
@@ -137,4 +165,31 @@ export const brands = [
   "Aquatherm",
   "National Plastic",
   "ESPA",
+];
+export const brandLogos = [
+  rakCeramics,
+  kludiRak,
+  makita,
+  dewalt,
+  knipex,
+  grohe,
+  tramontina,
+  albatros,
+  panasonic,
+  hikoki,
+  stanley,
+  bosch,
+  puma,
+  fujcab,
+  cosmoplast,
+  abb,
+  tileOfSpain,
+  ducab,
+  decoduct,
+  mustang,
+  henkel,
+  polycon,
+  rexton,
+  brand3M,
+  teka,
 ];

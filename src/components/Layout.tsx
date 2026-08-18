@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { ScrollToTop } from "./ScrollToTop";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <Header />
       <main className="flex-1 pt-18">{children}</main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

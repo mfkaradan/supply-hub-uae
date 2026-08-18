@@ -16,7 +16,7 @@ import {
 
 import { Layout, CtaBand } from "@/components/Layout";
 import { Reveal, RevealImage } from "@/components/Reveal";
-import { categories, brands } from "@/data/site";
+import { categories, brands, brandLogos } from "@/data/site";
 import hero from "@/assets/hero.jpg";
 import warehouse from "@/assets/warehouse.jpg";
 
@@ -336,15 +336,18 @@ function HomePage() {
             </h2>
           </Reveal>
           <div className="mt-14 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3 lg:grid-cols-5">
-            {brands.map((brand, i) => (
+            {brandLogos.map((brand, i) => (
               <Reveal
                 key={brand}
                 delay={(i % 5) * 60}
-                className="flex min-h-24 items-center justify-center bg-background px-4 py-8 text-center"
+                className="flex min-h-24 items-center justify-center bg-background p-6 text-center"
               >
-                <span className="font-display text-sm font-semibold text-muted-foreground transition-colors duration-300 hover:text-primary">
-                  {brand}
-                </span>
+                <img
+                  src={brand}
+                  alt="Brand partner logo"
+                  loading="lazy"
+                  className="max-h-12 w-auto max-w-[130px] object-contain transition-all duration-300 hover:scale-105"
+                />
               </Reveal>
             ))}
           </div>
