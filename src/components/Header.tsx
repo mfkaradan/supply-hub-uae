@@ -2,7 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 
-import logo from "@/assets/abm-logo.png.asset.json";
+import logo2 from "@/assets/abm-logo-2.webp"
+
 
 const links = [
   { to: "/", label: "Home" },
@@ -35,11 +36,11 @@ export function Header() {
         <div className="grid h-18 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)}>
             <img
-              src="https://supply-hub-uae.lovable.app/__l5e/assets-v1/bcf47304-ddba-4292-ba99-01c985df2342/abm-logo.png"
+              src={logo2}
               alt="Arafa Building Materials logo"
-              width={300}
-              height={100}
-              className="h-18 w-auto shrink-0"
+              width={200}
+              height={146}
+              className="h-16 w-auto shrink-0 object-contain transition-transform duration-200 hover:scale-[1.02]"
             />
             <span className="sr-only">Arafa Building Materials</span>
           </Link>
