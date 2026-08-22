@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-export function useInView<T extends HTMLElement>(threshold = 0.15) {
+export function useInView<T extends HTMLElement>(threshold = 0) {
   const ref = useRef<T | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -10,13 +10,13 @@ export function useInView<T extends HTMLElement>(threshold = 0.15) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
             setVisible(true);
             observer.disconnect();
           }
         });
       },
-      { threshold, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0, rootMargin: "0px 0px -20px 0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();

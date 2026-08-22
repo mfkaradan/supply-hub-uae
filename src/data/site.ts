@@ -20,6 +20,13 @@ import cleaningEquipment from "@/assets/cleaning-equipment.jpeg";
 import generalConsumables from "@/assets/General-consumables.jpeg";
 import marine from "@/assets/Marine.jpeg";
 
+import project1 from "@/assets/projects/project-1.webp";
+import project2 from "@/assets/projects/project 2.webp";
+import project3 from "@/assets/projects/project-3.webp";
+import project4 from "@/assets/projects/project4.webp";
+import project5 from "@/assets/projects/project-5.webp";
+import project6 from "@/assets/projects/project-6.webp";
+
 // Brand logos
 import brand3M from "@/assets/brands/3M.webp";
 import abb from "@/assets/brands/ABB.webp";
@@ -204,3 +211,61 @@ export const brandLogos = [
   brand3M,
   teka,
 ];
+
+export const projects = [
+  {
+    id: 1,
+    category: "Commercial",
+    title: "Al Raha Commercial Complex",
+    location: "Abu Dhabi, UAE",
+    description:
+      "Supplied cement, steel, blocks, electrical and finishing materials for this commercial development.",
+    image: project1,
+  },
+  {
+    id: 2,
+    category: "Residential",
+    title: "Dubai Hills Residence",
+    location: "Dubai, UAE",
+    description:
+      "Delivered a wide range of building materials including plumbing, electrical and finishing.",
+    image: project2,
+  },
+  {
+    id: 3,
+    category: "Industrial",
+    title: "Sharjah Industrial Warehouse",
+    location: "Sharjah, UAE",
+    description:
+      "Provided steel, cement, and hardware materials for the warehouse construction.",
+    image: project3,
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    title: "Sheikh Zayed Road Project",
+    location: "Dubai, UAE",
+    description:
+      "Supplied bulk construction materials for road and infrastructure works.",
+    image: project4,
+  },
+  {
+    id: 5,
+    category: "Commercial",
+    title: "Ajman School Complex",
+    location: "Ajman, UAE",
+    description:
+      "Provided all essential building materials for the construction of school facilities.",
+    image: project5,
+  },
+  {
+    id: 6,
+    category: "Commercial",
+    title: "Expo City Development",
+    location: "Dubai, UAE",
+    description:
+      "Supplying high-quality materials to support large-scale construction.",
+    image: project6,
+  },
+];
+

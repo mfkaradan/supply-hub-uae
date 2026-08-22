@@ -175,10 +175,13 @@
 }
 
 @utility image-reveal {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 1s cubic-bezier(0.22, 1, 0.36, 1);
+  & img {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-  &[data-visible="true"] {
+  &[data-visible="true"],
+  &[data-visible="true"] img {
     clip-path: inset(0 0 0 0);
   }
 }

@@ -2,9 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Layout, PageHero, CtaBand } from "@/components/Layout";
 import { Reveal, RevealImage } from "@/components/Reveal";
-import warehouse from "@/assets/warehouse.jpg";
 import logistics from "@/assets/logistics.jpg";
-
+import about from "@/assets/home/about.jpeg"
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -59,7 +58,7 @@ function AboutPage() {
       <section className="bg-background py-24 lg:py-32">
         <div className="container-abm grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <RevealImage
-            src={warehouse}
+            src={about}
             alt="Organised building materials warehouse in the UAE"
             width={1408}
             height={1008}

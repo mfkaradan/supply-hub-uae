@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import home_1 from "@/assets/home/home-1.webp"
 import {
   ArrowRight,
   Boxes,
@@ -197,7 +198,7 @@ function HomePage() {
             </Link>
           </Reveal>
           <RevealImage
-            src={warehouse}
+            src={home_1}
             alt="Building materials warehouse with organised stock and forklift operations"
             width={1408}
             height={1008}
