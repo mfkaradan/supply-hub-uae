@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { ArrowRight, FileText, PackageSearch, Building2, Boxes } from "lucide-react";
+import { ArrowRight, FileText, PackageSearch, Building2, Boxes, MapPin, Flag } from "lucide-react";
 
 import { Layout, PageHero } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
@@ -31,6 +31,27 @@ const enquiryTypes = [
   { icon: PackageSearch, title: "Product Enquiries", text: "Availability, brands and specifications." },
   { icon: Building2, title: "Project Supply", text: "Ongoing supply for developments and sites." },
   { icon: Boxes, title: "Custom Orders", text: "Special sourcing for specific requirements." },
+];
+
+const branches = [
+  {
+    tag: "MAIN BRANCH",
+    name: "Arafa Building Materials Trading L.L.C",
+    address: "Al Hail - Fujairah",
+    country: "UAE",
+  },
+  {
+    tag: "BRANCH 2",
+    name: "Arafa Building Materials Trading Br.1",
+    address: "Qidfi' - Fujairah",
+    country: "UAE",
+  },
+  {
+    tag: "BRANCH 3",
+    name: "Arafa Building Materials Trading LLC Sajaa Branch Sharjah",
+    address: "Al Sajaa - Emirates Industrial City - Sharjah",
+    country: "UAE",
+  },
 ];
 
 const fieldClass =
@@ -160,6 +181,58 @@ function ContactPage() {
               </ul>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Our Branches Section */}
+      <section className="bg-surface py-24 lg:py-32">
+        <div className="container-abm">
+          <Reveal className="text-center">
+            <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+              <span className="h-px w-6 bg-primary" />
+              OUR BRANCHES
+              <span className="h-px w-6 bg-primary" />
+            </p>
+            <h2 className="mt-6 text-3xl leading-tight font-semibold sm:text-4xl lg:text-5xl">
+              We're Closer Than You Think.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Visit any of our branches across the UAE for reliable building materials, trusted service and expert support.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {branches.map((branch, index) => (
+              <Reveal key={branch.tag} delay={index * 80}>
+                <div className="card-lift flex h-full flex-col justify-between rounded-lg border border-border bg-background p-8">
+                  <div>
+                    <div className="mb-6 inline-flex size-12 items-center justify-center rounded-md bg-accent text-primary">
+                      <Building2 className="size-6" />
+                    </div>
+                    <span className="mb-2 block text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                      {branch.tag}
+                    </span>
+                    <h3 className="text-lg font-semibold leading-snug">
+                      {branch.name}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <div className="my-6 border-t border-border" />
+                    <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+                      <span>{branch.address}</span>
+                    </div>
+                    <div className="my-6 border-t border-border" />
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <Flag className="size-4 shrink-0 text-primary" />
+                      <span>{branch.country}</span>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
