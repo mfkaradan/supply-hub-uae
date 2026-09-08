@@ -33,14 +33,14 @@ export function Header() {
       }`}
     >
       <div className="container-abm">
-        <div className="grid h-18 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="grid h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)}>
             <img
               src={logo2}
               alt="Arafa Building Materials logo"
               width={200}
               height={146}
-              className="h-16 w-auto shrink-0 object-contain transition-transform duration-200 hover:scale-[1.02]"
+              className="h-20 pb-2 w-auto shrink-0 object-contain transition-transform duration-200 hover:scale-[1.02]"
             />
             <span className="sr-only">Arafa Building Materials</span>
           </Link>
